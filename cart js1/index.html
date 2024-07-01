@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lr10-12</title>
+    <script src="js/script.js"></script>
+    <script>
+        function showYear() {
+            const currentYear = new Date().getFullYear();
+            alert("Текущий год: " + currentYear);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showYear()">Показать год</button>
+    <script>
+        function printFIO() {
+            const n = 21;
+            const outputDiv = document.getElementById("output");
+            for (let i = 0; i < n+5; i++) {
+                outputDiv.innerHTML += "Остроух Александр <br>";
+            }
+        }
+    </script>
+    <button onclick="printFIO()">Вывести строку</button>
+    <script>
+        function printArray() {
+            // Создаем массив из 5 целых чисел
+            const array = [3, -1, 9, -2, 5];
+            
+            // Выводим исходный массив
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<strong>Исходный массив:</strong> " + array.join(", ") + "<br>";
+
+            // Находим сумму положительных элементов
+            const positiveSum = array.reduce((sum, num) => num > 0 ? sum + num : sum, 0);
+            outputDiv.innerHTML += "<strong>Сумма положительных элементов:</strong> " + positiveSum + "<br>";
+
+            // Сортируем массив по возрастанию
+            const sortedArray = [...array].sort((a, b) => a - b);
+
+            // Выводим отсортированный массив
+            outputDiv.innerHTML += "<strong>Отсортированный массив:</strong> " + sortedArray.join(", ") + "<br>";
+        }
+    </script>
+    <button onclick="printArray()">Обработать массив</button>
+    <div id="output"></div>
+    <input type="number" id="inputX" placeholder="Введите значение x">
+    <button onclick="displayRez()">Рассчитать</button>
+</body>
+</html>

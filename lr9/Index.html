@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <h2>Встроенный JavaScript</h2>
+            <button onclick="alert('Встроенный')">Нажми меня</button>
+        </div>
+        
+        <div class="block">
+            <h2>Внутренний JavaScript</h2>
+            <script>
+                function showMessage() {
+                    alert('Внутренний');
+                }
+            </script>
+            <button onclick="showMessage()">Нажми меня</button>
+        </div>
+        
+        <div class="block">
+            <h2>Внешний JavaScript</h2>
+            <button id="externalBtn">Нажми меня</button>
+        </div>
+        
+        <div class="block">
+            <h2>Обработчик событий</h2>
+            <button id="eventHandlerBtn">Нажми меня</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('eventHandlerBtn').addEventListener('click', function() {
+            alert('Событие');
+        });
+    </script>
+</body>
+</html>
